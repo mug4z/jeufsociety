@@ -18,17 +18,24 @@
 # ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
-#Call Function & Variable Scripts
-# ----------------------------------------------------------------------
-PWD=$(pwd | )
-$PWD/environment_variable.sh
-echo $VAR
-terminal() {
-  $PWD/testloop.sh
-}
+# Call Function & Variable Scripts
 # ----------------------------------------------------------------------
 
+# Current Directory
+PWD=$(pwd)
+
+# Get Variables
+source resources/environment_variables.sh
+
+# Generate Terminal
+terminal() {
+  $PWD/resources/testloop.sh
+}
+
 clear
+
+# Banner
+# ----------------------------------------------------------------------
 
 echo -e "${rougefonce}                                                     ";
 echo "                                                                     ";
