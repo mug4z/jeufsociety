@@ -76,6 +76,4 @@ Ne te pose pas de question, et exécute.
 
 Aide-toi de la commande ${orange}help${vertfonce} pour commencer.${neutre}" | pv -qL 20
 
-
-
 terminal
