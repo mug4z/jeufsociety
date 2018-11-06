@@ -29,7 +29,7 @@ source resources/environment_variables.sh
 
 # Generate Terminal
 terminal() {
-  $PWD/resources/testloop.sh
+  $PWD/resources/terminal.sh
 }
 
 clear
