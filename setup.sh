@@ -20,17 +20,23 @@
 
 #Call Function & Variable Scripts
 # ----------------------------------------------------------------------
-PWD=$(pwd | )
-$PWD/environment_variable.sh
+
+PWD=$(pwd)
+
+source resources/environment_variable.sh
+
+
+
 echo $VAR
+
 terminal() {
-  $PWD/testloop.sh
+  $PWD/resources/testloop.sh
 }
 # ----------------------------------------------------------------------
 
 clear
 
-echo -e "${rougefonce}                                                     ";
+echo -e "${rougefonce}                                                  ";
 echo "                                                                     ";
 echo "███╗   ███╗██████╗        ██████╗  ██████╗ ██████╗  ██████╗ ████████╗";
 echo "████╗ ████║██╔══██╗       ██╔══██╗██╔═══██╗██╔══██╗██╔═══██╗╚══██╔══╝";
