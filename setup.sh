@@ -21,16 +21,6 @@
 # Call Function & Variable Scripts
 # ----------------------------------------------------------------------
 
-<<<<<<< HEAD
-PWD=$(pwd)
-
-source resources/environment_variable.sh
-
-
-
-echo $VAR
-
-=======
 # Current Directory
 PWD=$(pwd)
 
@@ -38,21 +28,16 @@ PWD=$(pwd)
 source resources/environment_variables.sh
 
 # Generate Terminal
->>>>>>> fae5452e69f9dbc8d691dc24aea09e2d61f82fe9
 terminal() {
-  $PWD/resources/testloop.sh
+  $PWD/resources/terminal.sh
 }
 
 clear
 
-<<<<<<< HEAD
-echo -e "${rougefonce}                                                  ";
-=======
 # Banner
 # ----------------------------------------------------------------------
 
 echo -e "${rougefonce}                                                     ";
->>>>>>> fae5452e69f9dbc8d691dc24aea09e2d61f82fe9
 echo "                                                                     ";
 echo "███╗   ███╗██████╗        ██████╗  ██████╗ ██████╗  ██████╗ ████████╗";
 echo "████╗ ████║██╔══██╗       ██╔══██╗██╔═══██╗██╔══██╗██╔═══██╗╚══██╔══╝";
