@@ -79,12 +79,12 @@ while true ; do
   esac
 
   # Get the file : chapters.sh
-  chapert () {
-    $PWD/resources/chapters.sh
+  chapter () {
+    source $PWD/resources/chapters.sh
   }
 
   # Show Current Chapter
-  chapert
+  chapter
 
   # Launch Terminal Again
   read -p  "commande> " command ;
