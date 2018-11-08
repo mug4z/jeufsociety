@@ -18,6 +18,10 @@
 # ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
+# First Launch Terminal
+# ----------------------------------------------------------------------
+read -p  "commande> " command ;
+
 while true ; do
 
   # Show Commands
@@ -49,9 +53,7 @@ while true ; do
     echo "ls"
   }
 
-  # Launch Terminal
-  read -p  "commande> " command ;
-
+  # Check the command
   case $command in
     help )
       print_help
@@ -75,5 +77,16 @@ while true ; do
       echo 'Erreur commande : veuillez écrire la commande  "help" pour afficher la page aide'
     ;;
   esac
+
+  # Get the file : chapters.sh
+  chapert () {
+    $PWD/resources/chapters.sh
+  }
+
+  # Show Current Chapter
+  chapert
+
+  # Launch Terminal Again
+  read -p  "commande> " command ;
 
 done

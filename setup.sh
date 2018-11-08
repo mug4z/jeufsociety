@@ -25,7 +25,7 @@
 PWD=$(pwd)
 
 # Get Variables
-source resources/environment_variables.sh
+source resources/variables.sh
 
 # Generate Terminal
 terminal() {
