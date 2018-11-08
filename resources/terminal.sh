@@ -28,7 +28,7 @@ print_help(){
   echo "cat nom_de_fichier    : affiche le contenue d'un fichier"
   echo "list addr ip     : liste les addresse disponibles"
   echo  "ls nom_de_fichier    : afiche le contenue du fichier"
-  echo "------------------------------------------------------------------"
+  echo "------------------------------------------------------------ -----"
 }
 # Test des print
 print_cd(){
