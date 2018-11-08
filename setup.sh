@@ -62,6 +62,6 @@ Je te laisse imaginer les désastres qui pourraient te tomber dessus.
 Première étape est de t'introduire dans les serveurs de Coca-Cola.
 Ne te pose pas de question, et exécute.
 
-${orange}Aide-toi de la commande help pour commencer.${neutre}" | pv -qL 20
+${orange}Aide-toi de la commande help pour commencer.${neutre}" #| pv -qL 20
 
 terminal

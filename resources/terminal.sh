@@ -20,50 +20,60 @@
 
 while true ; do
 
-print_help(){
-  echo ""
-  echo "help                         :  affiche cette page d'aide"
-  echo "cd nom_de_fichier     : Permet d'aller dans un autre fichier  "
-  echo "connect addresse_ip  : Se connect a l'addresse ip "
-  echo "cat nom_de_fichier    : affiche le contenue d'un fichier"
-  echo "list addr ip     : liste les addresse disponibles"
-  echo  "ls nom_de_fichier    : afiche le contenue du fichier"
-  echo "------------------------------------------------------------ -----"
-}
-# Test des print
-print_cd(){
-  echo "cd"
-}
-print_connect(){
-  echo "connect"
-}
-print_cat(){
-  echo "cat"
-}
-print_listaddrip(){
-  echo "Recherche:"
-}
-print_ls(){
-  echo "ls"
-}
+  # Show Commands
+  print_help(){
+    echo "----------------------------------------------------------------------"
+    echo "help                  : Affiche cette page d'aide."
+    echo "cd [nom du dossier]   : Permet de changer de répertoire."
+    echo "connect [adresse IP]  : Permet de se connecter à un serveur."
+    echo "cat [nom de fichier]  : Affiche le contenu du fichier."
+    echo "list ip addr          : Liste les addresses IP connues par Mr. Robot."
+    echo "ls [nom du dossier]   : Affiche le contenue du répertoire."
+    echo "----------------------------------------------------------------------"
+  }
 
+  # Test des print
+  print_cd(){
+    echo "cd"
+  }
+  print_connect(){
+    echo "connect"
+  }
+  print_cat(){
+    echo "cat"
+  }
+  print_listaddrip(){
+    echo "Recherche:"
+  }
+  print_ls(){
+    echo "ls"
+  }
 
-read -p  "commande> " command ;
-case $command in
-  help ) print_help
+  # Launch Terminal
+  read -p  "commande> " command ;
+
+  case $command in
+    help )
+      print_help
+      ;;
+    cd )
+      print_cd
+      ;;
+    connect )
+      print_connect
+      ;;
+    cat )
+      print_cat
+      ;;
+    list )
+      print_listaddrip
+      ;;
+    ls )
+      print_ls
+      ;;
+    *)
+      echo 'Erreur commande : veuillez écrire la commande  "help" pour afficher la page aide'
     ;;
-  cd ) print_cd
-    ;;
-  connect ) print_connect
-   ;;
-   cat ) print_cat
-   ;;
-   list ) print_listaddrip
-   ;;
-   ls ) print_ls
-   ;;
-  *)
-  echo 'Erreur commande : veuillez écrire la commande  "help" pour afficher la page aide'
-  ;;
-esac
+  esac
+
 done
