@@ -18,19 +18,7 @@
 # ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
-# Call Function & Variable Scripts
-# ----------------------------------------------------------------------
-
-# Get the file : chapters.sh
-chapter () {
-  source $PWD/resources/chapters.sh
-}
-
-# Launch the fisrt chapiter
-# ----------------------------------------------------------------------
-chapter
-
-# Launch Terminal
+# First Launch Terminal
 # ----------------------------------------------------------------------
 read -p  "commande> " command ;
 
@@ -49,6 +37,19 @@ while true ; do
   }
 
   # Test des print
+  print_listaddrip(){
+    echo "----------------------------------------------------------------------"
+    echo "250.239.213.29  : Doctorist."
+    echo "7.77.21.80      : Sportvalve."
+    echo "209.178.202.85  : Coinplace."
+    echo "149.41.208.106  : Blockchain planet"
+    echo "20.25.22.19     : Lerola"
+    echo "73.94.128.100   : Spotify"
+    echo "172.30.128.224  : CocaCola"
+    echo "125.60.0.242    : Cocalis"
+    echo "221.117.71.9    : Lamborghini"
+    echo "----------------------------------------------------------------------"
+  }
   print_cd(){
     echo "cd"
   }
@@ -57,9 +58,6 @@ while true ; do
   }
   print_cat(){
     echo "cat"
-  }
-  print_listaddrip(){
-    echo "Recherche:"
   }
   print_ls(){
     echo "ls"
@@ -81,6 +79,7 @@ while true ; do
       ;;
     list )
       print_listaddrip
+      echo
       ;;
     ls )
       print_ls
@@ -89,6 +88,11 @@ while true ; do
       echo 'Erreur commande : veuillez écrire la commande  "help" pour afficher la page aide'
     ;;
   esac
+
+  # Get the file : chapters.sh
+  chapter () {
+    source $PWD/resources/chapters.sh
+  }
 
   # Show Current Chapter
   chapter
