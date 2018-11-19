@@ -18,7 +18,19 @@
 # ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
-# First Launch Terminal
+# Call Function & Variable Scripts
+# ----------------------------------------------------------------------
+
+# Get the file : chapters.sh
+chapter () {
+  source $PWD/resources/chapters.sh
+}
+
+# Launch the fisrt chapiter
+# ----------------------------------------------------------------------
+chapter
+
+# Launch Terminal
 # ----------------------------------------------------------------------
 read -p  "commande> " command ;
 
@@ -77,11 +89,6 @@ while true ; do
       echo 'Erreur commande : veuillez écrire la commande  "help" pour afficher la page aide'
     ;;
   esac
-
-  # Get the file : chapters.sh
-  chapter () {
-    source $PWD/resources/chapters.sh
-  }
 
   # Show Current Chapter
   chapter

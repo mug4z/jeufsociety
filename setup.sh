@@ -25,7 +25,7 @@
 PWD=$(pwd)
 
 # Get Variables
-source resources/variables.sh
+source $PWD/resources/variables.sh
 
 # Generate Terminal
 terminal() {
@@ -48,20 +48,7 @@ echo "╚═╝     ╚═╝╚═╝  ╚═╝╚═╝    ╚═╝  ╚═�
 echo "                                                                     ";
 echo -e "                                                         ${neutre}";
 
-# Introduction
-# ----------------------------------------------------------------------
-
-echo -e "${rougefonce}${date}
-Mr. Robot :
-${vertfonce}Hello friend,
-Je me présente - je m'appelle Mr. Robot.
-Afin d'atteindre mes objectifs, ton aide me sera précieuse.
-Si tu n'acceptes pas de m'aider, toutes tes informations personnelles seront divulgées au grand public.
-Je te laisse imaginer les désastres qui pourraient te tomber dessus.
-
-Première étape est de t'introduire dans les serveurs de Coca-Cola.
-Ne te pose pas de question, et exécute.
-
-${orange}Aide-toi de la commande help pour commencer.${neutre}" #| pv -qL 20
+# Launch Terminal
+# ---------------------------------------------------------------------
 
 terminal
