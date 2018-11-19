@@ -25,10 +25,10 @@
 source $PWD/resources/variables.sh
 
 
-# Chapitre 0 - Introducion
+# Chapitre 1.1 - Introducion
 # ----------------------------------------------------------------------
 
 echo -e "${rougefonce}${date}
 Mr. Robot :
 ${vertfonce}Maintenant, lance la commande qui te permettra de lister les adresses IP.
-Cette command fonctionne comme un annuaire téléphonique - elle affiche les numéros d'accès des destinataires.${neutre}" | pv -qL 20
+Cette command fonctionne comme un annuaire téléphonique - elle affiche les numéros d'accès des destinataires.${neutre}" #| pv -qL 20

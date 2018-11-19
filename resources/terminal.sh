@@ -18,9 +18,21 @@
 # ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
-# First Launch Terminal
+# Call Function & Variable Scripts
 # ----------------------------------------------------------------------
-read -p  "commande> " command ;
+
+# Get the file : chapters.sh
+chapter () {
+  source $PWD/resources/chapters.sh
+}
+
+# Launch the History
+# ----------------------------------------------------------------------
+chapter
+
+# Launch Terminal
+# ----------------------------------------------------------------------
+read -p  "commande> " Command ;
 
 while true ; do
 
@@ -36,8 +48,8 @@ while true ; do
     echo "----------------------------------------------------------------------"
   }
 
-  # Test des print
-  print_listaddrip(){
+  # Show IP Address
+  print_listipaddr(){
     echo "----------------------------------------------------------------------"
     echo "250.239.213.29  : Doctorist."
     echo "7.77.21.80      : Sportvalve."
@@ -50,6 +62,7 @@ while true ; do
     echo "221.117.71.9    : Lamborghini"
     echo "----------------------------------------------------------------------"
   }
+
   print_cd(){
     echo "cd"
   }
@@ -64,7 +77,7 @@ while true ; do
   }
 
   # Check the command
-  case $command in
+  case $Command in
     help )
       print_help
       ;;
@@ -77,9 +90,8 @@ while true ; do
     cat )
       print_cat
       ;;
-    list )
-      print_listaddrip
-      echo
+    "list ip addr" )
+      print_listipaddr
       ;;
     ls )
       print_ls
@@ -89,15 +101,10 @@ while true ; do
     ;;
   esac
 
-  # Get the file : chapters.sh
-  chapter () {
-    source $PWD/resources/chapters.sh
-  }
-
   # Show Current Chapter
   chapter
 
   # Launch Terminal Again
-  read -p  "commande> " command ;
+  read -p  "commande> " Command ;
 
 done
