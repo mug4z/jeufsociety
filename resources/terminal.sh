@@ -37,7 +37,15 @@ read -p  "commande> " Command ;
 while true ; do
 
   # Show Commands
-  print_help(){
+  print_help1(){
+    echo "----------------------------------------------------------------------"
+    echo "help                  : Affiche cette page d'aide."
+    echo "connect [adresse IP]  : Permet de se connecter à un serveur."
+    echo "list ip addr          : Liste les addresses IP connues par Mr. Robot."
+    echo "----------------------------------------------------------------------"
+  }
+
+  print_help2(){
     echo "----------------------------------------------------------------------"
     echo "help                  : Affiche cette page d'aide."
     echo "cd [nom du dossier]   : Permet de changer de répertoire."
@@ -105,22 +113,39 @@ while true ; do
   print_cat(){
     echo "cat"
   }
+
   print_ls(){
     echo "ls"
   }
 
   # Check the Current Command
   case $Command in
+
     help )
-      print_help
+      # Which Terminal to Use
+      if [[ $CurrentChapter -le 2 ]]; then
+        print_help1
+      else
+        print_help2
+      fi
       ;;
-    cd )
-      print_cd
+
+    cd* )
+      # Check the Current Chapter
+      if [[ $CurrentChapter -eq 3 ]]; then
+        print_cd
+      else
+        echo 'Erreur commande : veuillez écrire la commande  "help" pour afficher la page aide'
+      fi
       ;;
+
     connect* )
       CheckIPFormat="connect\s[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"
+      # Command Active or Not
       if [[ $CommandConnect = "TurnOn" ]]; then
+        # Check Address IP Format
         if [[ $Command =~ $CheckIPFormat ]]; then
+          # Check the Right Address
           if [[ $Command == "connect 172.30.128.224" ]]; then
             print_connect
           else
@@ -133,16 +158,29 @@ while true ; do
         echo "La command n'est pas disponible actuellement."
       fi
       ;;
-    cat )
-      print_cat
+
+    cat* )
+      # Check the Current Chapter
+      if [[ $CurrentChapter -eq 3 ]]; then
+        print_cd
+      else
+        echo 'Erreur commande : veuillez écrire la commande  "help" pour afficher la page aide'
+      fi
       ;;
     "list ip addr" )
       print_listipaddr
       ;;
-    ls )
-      print_ls
+
+    ls* )
+      # Check the Current Chapter
+      if [[ $CurrentChapter -eq 3 ]]; then
+        print_ls
+      else
+        echo 'Erreur commande : veuillez écrire la commande  "help" pour afficher la page aide'
+      fi
       ;;
-    *)
+
+    * )
       echo 'Erreur commande : veuillez écrire la commande  "help" pour afficher la page aide'
     ;;
   esac

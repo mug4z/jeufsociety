@@ -40,14 +40,17 @@ elif [[ $Command = "list ip addr" ]] && [[ $SubCurrentChapter = 1 ]]; then
   # Next Chapter
   ((CurrentChapter++))
 
-# Chapitre 2 - Que la balade commance
+# Chapitre 2 - Bienvenu chez Coca-Cola
 # ----------------------------------------------------------------------
 # Allow to use the command : connect [adresse IP]
 CommandConnect="TurnOn"
 elif [[ $Command = "connect 172.30.128.224" ]] && [[ $CurrentChapter = 2 ]]; then
   # Statements
-  source $PWD/history/chapter2-1.sh
+  source $PWD/history/chapter2.sh
   CommandConnect="TurnOff"
   # Next Chapter
   ((CurrentChapter++))
 fi
+
+# Chapitre 3 - Que la balade commance
+# ----------------------------------------------------------------------
