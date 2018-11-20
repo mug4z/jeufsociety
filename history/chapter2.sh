@@ -26,7 +26,7 @@ source $PWD/resources/variables.sh
 
 clear
 
-# Chapitre 1.2 - Introducion
+# Chapitre 2 - Bienvenu chez Coca-Cola
 # ----------------------------------------------------------------------
 
 echo "                                                                        ";
