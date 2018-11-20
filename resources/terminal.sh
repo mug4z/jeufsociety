@@ -57,7 +57,7 @@ while true ; do
     echo "149.41.208.106  : Blockchain planet"
     echo "20.25.22.19     : Lerola"
     echo "73.94.128.100   : Spotify"
-    echo "172.30.128.224  : CocaCola"
+    echo "172.30.128.224  : Coca-Cola"
     echo "125.60.0.242    : Cocalis"
     echo "221.117.71.9    : Lamborghini"
     echo "----------------------------------------------------------------------"
@@ -115,8 +115,17 @@ while true ; do
       print_cd
       ;;
     connect* )
-      if [[ $Command == connect* ]] && [[ $CommandConnect = "TurnOn" ]]; then
-        print_connect
+      CheckIPFormat="connect\s[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"
+      if [[ $CommandConnect = "TurnOn" ]]; then
+        if [[ $Command =~ $CheckIPFormat ]]; then
+          if [[ $Command == "connect 172.30.128.224" ]]; then
+            print_connect
+          else
+            echo "La connexion est impossible."
+          fi
+        else
+          echo "L'addresse IP est invalide."
+        fi
       else
         echo "La command n'est pas disponible actuellement."
       fi

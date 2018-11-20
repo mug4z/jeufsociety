@@ -18,10 +18,18 @@
 # ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
+
+# Generate Terminal
+terminal() {
+  $PWD/resources/terminal.sh
+}
+
+
+
 # Chapitre 0 - Introducion
 # ----------------------------------------------------------------------
 if [[ -z $CurrentChapter ]]; then
-  # Text
+  # Statements
   source $PWD/history/chapter0.sh
   # Next Chapter
   ((CurrentChapter++))
@@ -29,27 +37,28 @@ if [[ -z $CurrentChapter ]]; then
 # Chapitre 1 - Introducion
 # ----------------------------------------------------------------------
 elif [[ $Command = "help" ]] && [[ $CurrentChapter = 1 ]]; then
-  # Text
+  # Statements
   source $PWD/history/chapter1-1.sh
   # Next Chapter
   ((SubCurrentChapter++))
 
 elif [[ $Command = "list ip addr" ]] && [[ $SubCurrentChapter = 1 ]]; then
-  # Text
+  # Statements
   source $PWD/history/chapter1-2.sh
   # Next Chapter
   ((CurrentChapter++))
-  echo $CurrentChapter
 
 # Chapitre 2 - Que la balade commance
 # ----------------------------------------------------------------------
-  # Permt to use the command : connect [adresse IP]
-  CommandConnect="TurnOn"
-
+# Allow to use the command : connect [adresse IP]
+CommandConnect="TurnOn"
 elif [[ $Command = "connect 172.30.128.224" ]] && [[ $CurrentChapter = 2 ]]; then
-  # Text
-  source $PWD/history/chapter2.sh
-
+  # Statements
+  source $PWD/history/chapter2-1.sh
   CommandConnect="TurnOff"
+  # Next Chapter
+  ((CurrentChapter++))
+
+echo $CurrentChapter
 
 fi
