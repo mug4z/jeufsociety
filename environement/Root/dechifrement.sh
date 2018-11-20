@@ -1,4 +1,4 @@
-| Majuscule      | Minuscule      | Chiffre
+echo -e "| Majuscule      | Minuscule      | Chiffre
 | :------------- | :------------- |:-------- |
 |A=00 |          |a=26 |          | 1=A      |
 |B=01 |          |b=27 |          | 2=B      |
@@ -25,4 +25,4 @@
 |W=22 |          |w=48 |
 |X=23 |          |x=49 |
 |Y=24 |          |y=50 |
-|Z=25 |          |z=51 |
+|Z=25 |          |z=51 |"
