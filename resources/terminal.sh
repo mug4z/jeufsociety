@@ -63,35 +63,38 @@ while true ; do
     echo "----------------------------------------------------------------------"
   }
 
-  # Show connection
+  # Show Connection
   print_connect(){
     for ((i=0 ; 100 - $i ; i++))
       do echo -ne '[                              ]' '('$i'%)\r'
 
+      # Show Percentage
       if [[ $i > 98 ]]; then
         echo -ne '[==============================] (100%)\r'
       elif [[ $i > 90 ]] && [[ $i < 97 ]]; then
-        echo -ne '[===========================   ]' '('$i'%)\r'
+        echo -ne '[===========================   ] ('$i'%)\r'
       elif [[ $i > 80 ]] && [[ $i < 89 ]]; then
-        echo -ne '[========================      ]' '('$i'%)\r'
+        echo -ne '[========================      ] ('$i'%)\r'
       elif [[ $i > 70 ]] && [[ $i < 79 ]]; then
-        echo -ne '[=====================         ]' '('$i'%)\r'
+        echo -ne '[=====================         ] ('$i'%)\r'
       elif [[ $i > 60 ]] && [[ $i < 69 ]]; then
-        echo -ne '[==================            ]' '('$i'%)\r'
+        echo -ne '[==================            ] ('$i'%)\r'
       elif [[ $i > 50 ]] && [[ $i < 59 ]]; then
-        echo -ne '[===============               ]' '('$i'%)\r'
+        echo -ne '[===============               ] ('$i'%)\r'
       elif [[ $i > 40 ]] && [[ $i < 49 ]]; then
-        echo -ne '[============                  ]' '('$i'%)\r'
+        echo -ne '[============                  ] ('$i'%)\r'
       elif [[ $i > 30 ]] && [[ $i < 39 ]]; then
-        echo -ne '[=========                     ]' '('$i'%)\r'
+        echo -ne '[=========                     ] ('$i'%)\r'
       elif [[ $i > 20 ]] && [[ $i < 29 ]]; then
-        echo -ne '[======                        ]' '('$i'%)\r'
+        echo -ne '[======                        ] ('$i'%)\r'
       elif [[ $i > 10 ]] && [[ $i < 19 ]]; then
-        echo -ne '[===                           ]' '('$i'%)\r'
+        echo -ne '[===                           ] ('$i'%)\r'
       fi
-
       sleep 0.05s
+
     done
+
+    # Result
     echo -ne '\n'
   }
 
@@ -106,7 +109,7 @@ while true ; do
     echo "ls"
   }
 
-  # Check the command
+  # Check the Current Command
   case $Command in
     help )
       print_help

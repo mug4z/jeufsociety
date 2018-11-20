@@ -18,14 +18,6 @@
 # ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
-
-# Generate Terminal
-terminal() {
-  $PWD/resources/terminal.sh
-}
-
-
-
 # Chapitre 0 - Introducion
 # ----------------------------------------------------------------------
 if [[ -z $CurrentChapter ]]; then
@@ -58,7 +50,4 @@ elif [[ $Command = "connect 172.30.128.224" ]] && [[ $CurrentChapter = 2 ]]; the
   CommandConnect="TurnOff"
   # Next Chapter
   ((CurrentChapter++))
-
-echo $CurrentChapter
-
 fi
