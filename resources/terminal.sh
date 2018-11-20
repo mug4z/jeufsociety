@@ -26,6 +26,11 @@ chapter () {
   source $PWD/resources/chapters.sh
 }
 
+# Get the file directory.sh
+directory (){
+  source $PWD/resources/directory.sh
+}
+
 # Launch the History
 # ----------------------------------------------------------------------
 chapter
@@ -104,17 +109,16 @@ while true ; do
     echo -ne '\n'
   }
 
-  print_cd(){
+  #print_cd(){
 
-  }
+#  }
 
   print_cat(){
     echo "cat"
   }
 
   print_ls(){
-    echo "administration"
-    echo "Recette"
+    directory
   }
 
   # Check the Current Command
