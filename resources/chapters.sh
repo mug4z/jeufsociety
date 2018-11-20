@@ -51,3 +51,6 @@ elif [[ $Command = "connect 172.30.128.224" ]] && [[ $CurrentChapter = 2 ]]; the
   # Next Chapter
   ((CurrentChapter++))
 fi
+
+# Chapitre 3 - Bienvenu chez Coca-Cola
+# ----------------------------------------------------------------------

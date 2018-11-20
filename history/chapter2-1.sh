@@ -24,10 +24,25 @@
 # Get Variables
 source $PWD/resources/variables.sh
 
+clear
 
 # Chapitre 1.2 - Introducion
 # ----------------------------------------------------------------------
 
+echo "                                                                        ";
+echo " ██████╗ ██████╗  ██████╗ █████╗        ██████╗ ██████╗ ██╗      █████╗ ";
+echo "██╔════╝██╔═══██╗██╔════╝██╔══██╗      ██╔════╝██╔═══██╗██║     ██╔══██╗";
+echo "██║     ██║   ██║██║     ███████║█████╗██║     ██║   ██║██║     ███████║";
+echo "██║     ██║   ██║██║     ██╔══██║╚════╝██║     ██║   ██║██║     ██╔══██║";
+echo "╚██████╗╚██████╔╝╚██████╗██║  ██║      ╚██████╗╚██████╔╝███████╗██║  ██║";
+echo " ╚═════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝       ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝";
+echo "                                                                        ";
+echo "             ACCÈS INTERDIT AUX PERSONNES NON AUTORISÉES                ";
+echo "                                                                        ";
+
+
 echo -e "${rougefonce}${date}
 Mr. Robot :
-${vertfonce}TOP! Dirige-toi dans le répertoire X.${neutre}" #| pv -qL 20
+${vertfonce}Bien ! L'étape suivante est de trouver la recette.
+Je t'ai ajouté des nouvelles commandes.
+Affiche-les avec la commande ${orange}help${vertfonce}.${neutre}" #| pv -qL 20
