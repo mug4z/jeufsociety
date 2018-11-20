@@ -31,12 +31,25 @@ if [[ -z $CurrentChapter ]]; then
 elif [[ $Command = "help" ]] && [[ $CurrentChapter = 1 ]]; then
   # Text
   source $PWD/history/chapter1-1.sh
+  # Next Chapter
+  ((SubCurrentChapter++))
 
-elif [[ $Command = "list ip addr" ]] && [[ $CurrentChapter = 1 ]]; then
+elif [[ $Command = "list ip addr" ]] && [[ $SubCurrentChapter = 1 ]]; then
   # Text
   source $PWD/history/chapter1-2.sh
-
   # Next Chapter
   ((CurrentChapter++))
   echo $CurrentChapter
+
+# Chapitre 2 - Que la balade commance
+# ----------------------------------------------------------------------
+  # Permt to use the command : connect [adresse IP]
+  CommandConnect="TurnOn"
+
+elif [[ $Command = "connect 172.30.128.224" ]] && [[ $CurrentChapter = 2 ]]; then
+  # Text
+  source $PWD/history/chapter2.sh
+
+  CommandConnect="TurnOff"
+
 fi

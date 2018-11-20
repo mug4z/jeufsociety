@@ -51,9 +51,9 @@ while true ; do
   # Show IP Address
   print_listipaddr(){
     echo "----------------------------------------------------------------------"
-    echo "250.239.213.29  : Doctorist."
-    echo "7.77.21.80      : Sportvalve."
-    echo "209.178.202.85  : Coinplace."
+    echo "250.239.213.29  : Doctorist"
+    echo "7.77.21.80      : Sportvalve"
+    echo "209.178.202.85  : Coinplace"
     echo "149.41.208.106  : Blockchain planet"
     echo "20.25.22.19     : Lerola"
     echo "73.94.128.100   : Spotify"
@@ -63,12 +63,42 @@ while true ; do
     echo "----------------------------------------------------------------------"
   }
 
+  # Show connection
+  print_connect(){
+    for ((i=0 ; 100 - $i ; i++))
+      do echo -ne '[                              ]' '('$i'%)\r'
+
+      if [[ $i > 98 ]]; then
+        echo -ne '[==============================] (100%)\r'
+      elif [[ $i > 90 ]] && [[ $i < 97 ]]; then
+        echo -ne '[===========================   ]' '('$i'%)\r'
+      elif [[ $i > 80 ]] && [[ $i < 89 ]]; then
+        echo -ne '[========================      ]' '('$i'%)\r'
+      elif [[ $i > 70 ]] && [[ $i < 79 ]]; then
+        echo -ne '[=====================         ]' '('$i'%)\r'
+      elif [[ $i > 60 ]] && [[ $i < 69 ]]; then
+        echo -ne '[==================            ]' '('$i'%)\r'
+      elif [[ $i > 50 ]] && [[ $i < 59 ]]; then
+        echo -ne '[===============               ]' '('$i'%)\r'
+      elif [[ $i > 40 ]] && [[ $i < 49 ]]; then
+        echo -ne '[============                  ]' '('$i'%)\r'
+      elif [[ $i > 30 ]] && [[ $i < 39 ]]; then
+        echo -ne '[=========                     ]' '('$i'%)\r'
+      elif [[ $i > 20 ]] && [[ $i < 29 ]]; then
+        echo -ne '[======                        ]' '('$i'%)\r'
+      elif [[ $i > 10 ]] && [[ $i < 19 ]]; then
+        echo -ne '[===                           ]' '('$i'%)\r'
+      fi
+
+      sleep 0.05s
+    done
+    echo -ne '\n'
+  }
+
   print_cd(){
     echo "cd"
   }
-  print_connect(){
-    echo "connect"
-  }
+
   print_cat(){
     echo "cat"
   }
@@ -84,8 +114,12 @@ while true ; do
     cd )
       print_cd
       ;;
-    connect )
-      print_connect
+    connect* )
+      if [[ $Command == connect* ]] && [[ $CommandConnect = "TurnOn" ]]; then
+        print_connect
+      else
+        echo "La command n'est pas disponible actuellement."
+      fi
       ;;
     cat )
       print_cat
