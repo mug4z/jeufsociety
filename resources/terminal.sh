@@ -49,9 +49,7 @@ while true ; do
     echo "----------------------------------------------------------------------"
     echo "help                  : Affiche cette page d'aide."
     echo "cd [nom du dossier]   : Permet de changer de répertoire."
-    echo "connect [adresse IP]  : Permet de se connecter à un serveur."
     echo "cat [nom de fichier]  : Affiche le contenu du fichier."
-    echo "list ip addr          : Liste les addresses IP connues par Mr. Robot."
     echo "ls [nom du dossier]   : Affiche le contenue du répertoire."
     echo "----------------------------------------------------------------------"
   }
@@ -77,25 +75,25 @@ while true ; do
       do echo -ne '[                              ]' '('$i'%)\r'
 
       # Show Percentage
-      if [[ $i > 98 ]]; then
+      if [[ $i -gt 98 ]]; then
         echo -ne '[==============================] (100%)\r'
-      elif [[ $i > 90 ]] && [[ $i < 97 ]]; then
+      elif [[ $i -gt 90 ]] && [[ $i -lt 97 ]]; then
         echo -ne '[===========================   ] ('$i'%)\r'
-      elif [[ $i > 80 ]] && [[ $i < 89 ]]; then
+      elif [[ $i -gt 80 ]] && [[ $i -lt 89 ]]; then
         echo -ne '[========================      ] ('$i'%)\r'
-      elif [[ $i > 70 ]] && [[ $i < 79 ]]; then
+      elif [[ $i -gt 70 ]] && [[ $i -lt 79 ]]; then
         echo -ne '[=====================         ] ('$i'%)\r'
-      elif [[ $i > 60 ]] && [[ $i < 69 ]]; then
+      elif [[ $i -gt 60 ]] && [[ $i -lt 69 ]]; then
         echo -ne '[==================            ] ('$i'%)\r'
-      elif [[ $i > 50 ]] && [[ $i < 59 ]]; then
+      elif [[ $i -gt 50 ]] && [[ $i -lt 59 ]]; then
         echo -ne '[===============               ] ('$i'%)\r'
-      elif [[ $i > 40 ]] && [[ $i < 49 ]]; then
+      elif [[ $i -gt 40 ]] && [[ $i -lt 49 ]]; then
         echo -ne '[============                  ] ('$i'%)\r'
-      elif [[ $i > 30 ]] && [[ $i < 39 ]]; then
+      elif [[ $i -gt 30 ]] && [[ $i -lt 39 ]]; then
         echo -ne '[=========                     ] ('$i'%)\r'
-      elif [[ $i > 20 ]] && [[ $i < 29 ]]; then
+      elif [[ $i -gt 20 ]] && [[ $i -lt 29 ]]; then
         echo -ne '[======                        ] ('$i'%)\r'
-      elif [[ $i > 10 ]] && [[ $i < 19 ]]; then
+      elif [[ $i -gt 10 ]] && [[ $i -lt 19 ]]; then
         echo -ne '[===                           ] ('$i'%)\r'
       fi
       sleep 0.05s
@@ -107,7 +105,7 @@ while true ; do
   }
 
   print_cd(){
-    echo "cd"
+
   }
 
   print_cat(){
@@ -115,7 +113,8 @@ while true ; do
   }
 
   print_ls(){
-    echo "ls"
+    echo "administration"
+    echo "Recette"
   }
 
   # Check the Current Command
