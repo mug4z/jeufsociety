@@ -1,14 +1,16 @@
 #!/bin/sh
 whereIAM=racine
 admin=administration
-recette=recette
-racine=racine
+
+
 if [[ $whereIAM = "$racine" ]]; then
-  print_ls(){
-    echo "root"
-    echo "administration"
-    echo "recette"
-  }
+  source $PWD/environement/racine.sh
+
 elif [[ $whereIAM = "$admin" ]]; then
-  source source $PWD/environement/administration.sh
+  source $PWD/environement/administration.sh
+
+elif [[ $whereIAM = "recette" ]]; then
+  #statements
+elif [[ $whereIAM =  ]]; then
+  #statements
 fi

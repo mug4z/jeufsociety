@@ -53,8 +53,10 @@ while true ; do
   print_help2(){
     echo "----------------------------------------------------------------------"
     echo "help                  : Affiche cette page d'aide."
-    echo "cd [nom du dossier]   : Permet de changer de répertoire."
     echo "cat [nom de fichier]  : Affiche le contenu du fichier."
+    echo "cd [nom du dossier]   : Permet de changer de répertoire."
+    echo "connect [adresse IP]  : Permet de se connecter à un serveur."
+    echo "list ip addr          : Liste les addresses IP connues par Mr. Robot."
     echo "ls [nom du dossier]   : Affiche le contenue du répertoire."
     echo "----------------------------------------------------------------------"
   }
