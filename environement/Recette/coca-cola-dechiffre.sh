@@ -1,4 +1,4 @@
-Ingrédients :
+echo -e "Ingrédients :
 
     28 g de citrate de caféine ;
     85 g d'acide citrique ;
@@ -10,8 +10,6 @@ Ingrédients :
     9,5 litres d'eau ;
     du caramel en quantité suffisante pour donner de la couleur.
 
-« Mélanger l'acide de caféine et le jus de lime dans l'eau bouillante, ajouter la vanille et l'arôme quand le mélange est froid. »
-
 Arôme (Merchandise 7X) :
 
     1 quart de gallon US d'alcool ;
@@ -20,8 +18,4 @@ Arôme (Merchandise 7X) :
     120 huile de citron ;
     20 huile de coriandre ;
     40 huile de noix de muscade ;
-    40 huile de néroli.
-
-« Laisser reposer 24 heures. »
-
-Cette recette ne précise pas quand ou comment les ingrédients sont mélangés, ni la signification de la mesure d'« huile » pour l'assaisonnement. C'était commun dans les recettes à l'époque, car il a été entendu que les préparateurs connaissaient la méthode[réf. nécessaire].
+    40 huile de néroli."
