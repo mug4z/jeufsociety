@@ -18,9 +18,38 @@
 # ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
+
+# Call Function & Variable Scripts
+# ----------------------------------------------------------------------
+
+# Initialize WhereIAM to racine
+WhereIAM="racine"
+
+
+
+if [[ $Command = "ls" ]]; then # Start if ls
+  if [[ $WhereIAM = "racine" ]]; then
+
+    source "$PWD"/environment/racine.sh # Résultat ls de racine
+
+  elif [[ $WhereIAM = "administration" ]]; then
+
+    source "$PWD"/environment/administration/administration.sh # Résultat ls d'administration
+
+  elif [[ $WhereIAM = "recette" ]]; then
+
+    source "$PWD"/environment/recipe/recette.sh # Résultat ls de recette
+
+  elif [[ $WhereIAM = "root"  ]]; then # Résultat ls de root
+
+    source "$PWD"/environment/root/root.sh
+
+  fi
+
+fi # end if ls
+
 # Check Directory
 CheckCommand="cd\s"
-
 # Navigation in the directories
 if [[ $Command =~ $CheckCommand ]]; then
   # Go to Administrationn
