@@ -18,7 +18,21 @@
 # ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
-WhereIAM=racine
+# Call Function & Variable Scripts
+# ----------------------------------------------------------------------
+
+# Check Current Directory in Game
+source $PWD/environment/administration/administration.sh
+source $PWD/environment/racine.sh
+source $PWD/environment/recipe/recette.sh
+source $PWD/environment/root/root.sh
+
+if [[ $WhereIAM = "racine" ]] && [[ $WhereIAM = "racine" ]]; then
+  source $PWD
+fi
+
+
+
 admin=administration
 
 
