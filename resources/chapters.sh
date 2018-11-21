@@ -49,6 +49,8 @@ elif [[ $Command = "connect 172.30.128.224" ]] && [[ $CurrentChapter = 2 ]]; the
   # Statements
   source $PWD/history/chapter2.sh
   CommandConnect="TurnOff"
+  WhereIAM="racine"
+  Path="coca-cola/racine>"
   # Next Chapter
   ((CurrentChapter++))
 fi

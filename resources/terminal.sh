@@ -37,7 +37,8 @@ chapter
 
 # Launch Terminal
 # ----------------------------------------------------------------------
-read -p  "commande> " Command ;
+Path="commande> "
+read -p  $Path Command ;
 
 while true ; do
 
@@ -142,7 +143,7 @@ while true ; do
       if [[ $CurrentChapter -eq 3 ]]; then
         print_cd
       else
-        echo 'Erreur commande : veuillez écrire la commande  "help" pour afficher la page aide'
+        echo 'Erreur commande : veuillez écrire la commande "help" pour afficher la page aide'
       fi
       ;;
 
@@ -171,7 +172,7 @@ while true ; do
       if [[ $CurrentChapter -eq 3 ]]; then
         print_cd
       else
-        echo 'Erreur commande : veuillez écrire la commande  "help" pour afficher la page aide'
+        echo 'Erreur commande : veuillez écrire la commande "help" pour afficher la page aide'
       fi
       ;;
     "list ip addr" )
@@ -183,12 +184,12 @@ while true ; do
       if [[ $CurrentChapter -eq 3 ]]; then
         print_ls
       else
-        echo 'Erreur commande : veuillez écrire la commande  "help" pour afficher la page aide'
+        echo 'Erreur commande : veuillez écrire la commande "help" pour afficher la page aide'
       fi
       ;;
 
     * )
-      echo 'Erreur commande : veuillez écrire la commande  "help" pour afficher la page aide'
+      echo 'Erreur commande : veuillez écrire la commande "help" pour afficher la page aide'
     ;;
   esac
 
@@ -196,6 +197,6 @@ while true ; do
   chapter
 
   # Launch Terminal Again
-  read -p  "commande> " Command ;
+  read -p  $Path Command ;
 
 done

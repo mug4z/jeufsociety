@@ -22,7 +22,7 @@ WhereIAM="recette"
 
 # Show Content
 if [[ $Command == cd* ]]; then
-  echo "Vous êtes dans le répertoire recipe."
+  echo "Vous êtes dans le répertoire recette."
 else
   echo "coca-cola.txt"
   echo "coca-cola-dechiffre.txt"
