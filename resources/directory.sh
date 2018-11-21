@@ -21,29 +21,41 @@
 # Call Function & Variable Scripts
 # ----------------------------------------------------------------------
 
+# Initialize WhereIAM to racine
+WhereIAM="racine"
+
 # Check Current Directory in Game
 source $PWD/environment/administration/administration.sh
 source $PWD/environment/racine.sh
 source $PWD/environment/recipe/recette.sh
 source $PWD/environment/root/root.sh
 
-if [[ $WhereIAM = "racine" ]] && [[ $WhereIAM = "racine" ]]; then
+if [[ $WhereIAM = "racine" ]] && [[ $Command = "cd" ]]; then
   source $PWD
 fi
 
 
 
-admin=administration
+#admin=administration
 
 
-if [[ $whereIAM = "$racine" ]]; then
-  source $PWD/environement/racine.sh
+if [[ $Command = "ls" ]]; then # Start if ls
+  if [[ $WhereIAM = "racine" ]]; then
 
-elif [[ $whereIAM = "$admin" ]]; then
-  source $PWD/environement/administration.sh
+    source "$PWD"/environment/racine.sh # Résultat ls de racine
 
-elif [[ $whereIAM = "recette" ]]; then
-  #statements
-elif [[ $whereIAM =  ]]; then
-  #statements
-fi
+  elif [[ $WhereIAM = "administration" ]]; then
+
+    source "$PWD"/environment/administration/administration.sh # Résultat ls d'administration
+
+  elif [[ $WhereIAM = "recette" ]]; then
+
+    source "$PWD"/environment/recipe/recette.sh # Résultat ls de recette
+
+  elif [[ $WhereIAM = "root"  ]]; then # Résultat ls de root
+
+    source "$PWD"/environment/root/root.sh
+
+  fi
+
+fi # end if ls
