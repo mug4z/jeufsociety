@@ -24,6 +24,6 @@ WhereIAM="root"
 if [[ $Command == cd* ]]; then
   echo "Vous êtes dans le répertoire root."
 else
-  echo "password.txt"
-  echo "dechifrement.txt"
+  echo -e "${violetclair}password.txt"
+  echo -e "dechifrement.txt${neutre}"
 fi

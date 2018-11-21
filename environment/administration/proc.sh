@@ -18,7 +18,7 @@
 # ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
-echo -e "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+echo -e "${violetclair}Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 Integer vehicula ipsum eu nisi feugiat, at pretium purus viverra.
 Vivamus sodales mauris nec nunc mollis iaculis.
@@ -35,4 +35,4 @@ Curabitur ut tortor sit amet mi sagittis convallis ut vel purus.
 Morbi consequat sem nec nulla sollicitudin, vitae ultricies orci tincidunt.
 Etiam tristique nunc id vulputate dictum.
 
-Ut scelerisque lectus at luctus dictum."
+Ut scelerisque lectus at luctus dictum.${neutre}"

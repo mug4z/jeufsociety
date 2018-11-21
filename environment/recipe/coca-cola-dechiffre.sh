@@ -18,7 +18,7 @@
 # ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
-echo -e "Ingrédients :
+echo -e "${violetclair}Ingrédients :
 
     28 g de citrate de caféine ;
     85 g d'acide citrique ;
@@ -38,4 +38,4 @@ Arôme (Merchandise 7X) :
     120 huile de citron ;
     20 huile de coriandre ;
     40 huile de noix de muscade ;
-    40 huile de néroli."
+    40 huile de néroli.${neutre}"

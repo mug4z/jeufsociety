@@ -24,7 +24,7 @@ WhereIAM="racine"
 if [[ $Command == cd* ]]; then
   echo "Vous êtes dans le répertoire racine."
 else
-  echo -e "${grisclair}administration"
+  echo -e "${violetclair}administration"
   echo "recette"
-  echo "root"
+  echo -e "root${neutre}"
 fi

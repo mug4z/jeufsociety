@@ -24,7 +24,7 @@ WhereIAM="administration"
 if [[ $Command == cd* ]]; then
   echo "Vous êtes dans le répertoire administration."
 else
-  echo "bin.txt"
+  echo -e "${violetclair}bin.txt"
   echo "boot.txt"
   echo "ini.txt"
   echo "lib.txt"
@@ -33,5 +33,5 @@ else
   echo "proc.txt"
   echo "run.txt"
   echo "tmp.txt"
-  echo "var.txt"
+  echo -e "var.txt${neutre}"
 fi

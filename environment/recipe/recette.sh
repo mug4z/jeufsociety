@@ -24,6 +24,6 @@ WhereIAM="recette"
 if [[ $Command == cd* ]]; then
   echo "Vous êtes dans le répertoire recette."
 else
-  echo "coca-cola.txt"
-  echo "coca-cola-dechiffre.txt"
+  echo -e "${violetclair}coca-cola.txt"
+  echo -e "coca-cola-dechiffre.txt${neutre}"
 fi
