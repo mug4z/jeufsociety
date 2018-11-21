@@ -20,6 +20,11 @@
 
 WhereIAM="racine"
 
-echo "administration"
-echo "recette"
-echo "root"
+# Show Content
+if [[ $Command == cd* ]]; then
+  echo "Vous êtes dans le répertoire racine."
+else
+  echo "administration"
+  echo "recette"
+  echo "root"
+fi

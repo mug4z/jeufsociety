@@ -55,6 +55,7 @@ while true ; do
     echo "help                  : Affiche cette page d'aide."
     echo "cat [nom de fichier]  : Affiche le contenu du fichier."
     echo "cd [nom du dossier]   : Permet de changer de répertoire."
+    echo "cd ~                  : Permet d'aller dans le répertoire racine."
     echo "connect [adresse IP]  : Permet de se connecter à un serveur."
     echo "list ip addr          : Liste les addresses IP connues par Mr. Robot."
     echo "ls [nom du dossier]   : Affiche le contenue du répertoire."
@@ -111,9 +112,10 @@ while true ; do
     echo -ne '\n'
   }
 
-  #print_cd(){
-
-#  }
+  # Change Directory
+  print_cd(){
+    directory
+  }
 
   print_cat(){
     echo "cat"

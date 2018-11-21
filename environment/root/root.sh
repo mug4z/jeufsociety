@@ -20,5 +20,10 @@
 
 WhereIAM="root"
 
-echo "password.txt"
-echo "dechifrement.txt"
+# Show Content
+if [[ $Command == cd* ]]; then
+  echo "Vous êtes dans le répertoire root."
+else
+  echo "password.txt"
+  echo "dechifrement.txt"
+fi

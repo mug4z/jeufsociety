@@ -20,4 +20,10 @@
 
 WhereIAM="recette"
 
-echo "coca-cola.txt"
+# Show Content
+if [[ $Command == cd* ]]; then
+  echo "Vous êtes dans le répertoire recipe."
+else
+  echo "coca-cola.txt"
+  echo "coca-cola-dechiffre.txt"
+fi
