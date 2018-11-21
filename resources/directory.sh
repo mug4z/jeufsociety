@@ -18,26 +18,13 @@
 # ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
-<<<<<<< HEAD
+
 # Call Function & Variable Scripts
 # ----------------------------------------------------------------------
 
 # Initialize WhereIAM to racine
 WhereIAM="racine"
 
-# Check Current Directory in Game
-source $PWD/environment/administration/administration.sh
-source $PWD/environment/racine.sh
-source $PWD/environment/recipe/recette.sh
-source $PWD/environment/root/root.sh
-
-if [[ $WhereIAM = "racine" ]] && [[ $Command = "cd" ]]; then
-  source $PWD
-fi
-
-
-
-#admin=administration
 
 
 if [[ $Command = "ls" ]]; then # Start if ls
@@ -60,10 +47,9 @@ if [[ $Command = "ls" ]]; then # Start if ls
   fi
 
 fi # end if ls
-=======
+
 # Check Directory
 CheckCommand="cd\s"
-
 # Navigation in the directories
 if [[ $Command =~ $CheckCommand ]]; then
   # Go to Administrationn
@@ -87,4 +73,3 @@ fi
 
 
 echo $WhereIAM
->>>>>>> d7f7da286f05421607e099d8b0a695fd2a7360bb
