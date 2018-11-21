@@ -39,6 +39,7 @@ elif [[ $Command = "list ip addr" ]] && [[ $SubCurrentChapter = 1 ]]; then
   source $PWD/history/chapter1-2.sh
   # Next Chapter
   ((CurrentChapter++))
+  ((SubCurrentChapter++))
 
 # Chapitre 2 - Bienvenu chez Coca-Cola
 # ----------------------------------------------------------------------
