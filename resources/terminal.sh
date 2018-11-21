@@ -59,7 +59,7 @@ while true ; do
     echo "cd ~                  : Permet d'aller dans le répertoire racine."
     echo "connect [adresse IP]  : Permet de se connecter à un serveur."
     echo "list ip addr          : Liste les addresses IP connues par Mr. Robot."
-    echo "ls [nom du dossier]   : Affiche le contenue du répertoire."
+    echo "ls                    : Affiche le contenue du répertoire."
     echo "----------------------------------------------------------------------"
   }
 
@@ -179,7 +179,7 @@ while true ; do
       print_listipaddr
       ;;
 
-    ls* )
+    ls )
       # Check the Current Chapter
       if [[ $CurrentChapter -eq 3 ]]; then
         print_ls
