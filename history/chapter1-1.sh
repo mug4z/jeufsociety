@@ -31,4 +31,4 @@ source $PWD/resources/variables.sh
 echo -e "${rougefonce}${date}
 Mr. Robot :
 ${vertfonce}Maintenant, lance la commande qui te permettra de lister les adresses IP.
-La commande affiche les adresses des destinataires comme un annuaire téléphonique qui liste les numéros de téléphone.${neutre}" #| pv -qL 20
+La commande affiche les adresses des destinataires comme un annuaire téléphonique qui liste les numéros de téléphone.${neutre}" | pv -qL 20

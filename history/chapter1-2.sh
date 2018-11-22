@@ -30,4 +30,4 @@ source $PWD/resources/variables.sh
 
 echo -e "${rougefonce}${date}
 Mr. Robot :
-${vertfonce}Connecte-toi aux serveurs de Coca-Cola.${neutre}" #| pv -qL 20
+${vertfonce}Connecte-toi aux serveurs de Coca-Cola.${neutre}" | pv -qL 20

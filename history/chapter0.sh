@@ -40,4 +40,4 @@ Première étape est de t'introduire dans les serveurs de Coca-Cola.
 Ne te pose pas de question, et exécute.
 
 ${vertfonce}Tape la commande ${orange}help${vertfonce} si tu as besoin d'aide.
-${vertfonce}Elle te sera utile tout le long de notre collaboration.${neutre}" #| pv -qL 20
+${vertfonce}Elle te sera utile tout le long de notre collaboration.${neutre}" | pv -qL 20
