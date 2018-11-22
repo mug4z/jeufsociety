@@ -24,7 +24,7 @@
 # Get Variables
 source $PWD/resources/variables.sh
 
-# Chapitre 3 - Que la balade commance
+# Chapitre 4 - Dernière étape
 # ----------------------------------------------------------------------
 
 echo -e "${rougefonce}${date}
