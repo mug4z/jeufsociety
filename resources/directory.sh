@@ -60,14 +60,55 @@ elif [[ $Command = "ls" ]]; then
     source $PWD/environment/root/root.sh
   fi
 
+CheckCommandCat="cat\s"
+elif [[ $Command =~ $CheckCommandCat ]]; then
+  if [[ $WhereIAM == "administration" ]]; then
+    if [[ $Command == "cat bin.txt" ]]; then
+      source $PWD/environment/administration/bin.sh
+    elif [[ $Command == "cat boot.txt" ]]; then
+        source $PWD/environment/administration/boot.sh
+    elif [[ $Command == "cat init.txt" ]]; then
+        source $PWD/environment/administration/init.sh
+    elif [[ $Command == "cat lib.txt" ]]; then
+        source $PWD/environment/administration/lib.sh
+    elif [[ $Command == "cat media.txt" ]]; then
+        source $PWD/environment/administration/media.sh
+    elif [[ $Command == "cat mnt.txt" ]]; then
+        source $PWD/environment/administration/mnt.sh
+    elif [[ $Command == "cat proc.txt" ]]; then
+        source $PWD/environment/administration/proc.sh
+    elif [[ $Command == "cat run.txt" ]]; then
+        source $PWD/environment/administration/run.sh
+    elif [[ $Command == "cat tmp.txt" ]]; then
+        source $PWD/environment/administration/tmp.sh
+    elif [[ $Command == "cat var.txt" ]]; then
+        source $PWD/environment/administration/var.sh
+
+else
+  echo "Fichier introuvable"
+fi # end of administration
+
+  elif [[ $WhereIAM == "recipe" ]]; then
+    if [[ $Command == "cat coca-cola.txt"  ]]; then
+      source $PWD/environment/recipe/coca-cola.sh
+    fi
+elif [[ $WhereIAM == "root" ]]; then
+  if [[ $Command == "cat dechifrement.txt" ]]; then
+    source $PWD/environment/root/dechifrement.sh
+  elif [[ $Command == "cat password" ]]; then
+    source $PWD/environment/root/password.sh
+  else
+    echo "Fichier introuvable"
+  fi # end of root
+else
+  echo "Fichier introuvable"
+fi # end of CheckCommandCat
+
+#statements
 # Error Command
 else
   echo 'Erreur commande : veuillez écrire la commande "help" pour afficher la page aide'
 
 # End Check Directory
 fi
-
-
-
-
 echo $WhereIAM
