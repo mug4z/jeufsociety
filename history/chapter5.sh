@@ -40,3 +40,6 @@ echo "╚═╝     ╚══════╝ ╚═════╝  ╚═══
 echo "                                                              ";
 echo "------------------------- Fin du jeu -------------------------";
 echo -e "                                                  ${neutre}";
+
+# Close the Game
+exit

@@ -37,8 +37,8 @@ chapter
 
 # Launch Terminal
 # ----------------------------------------------------------------------
-Path="commande> "
-read -p  $Path Command ;
+Path="commande>"
+read -ep $Path" " Command ;
 
 while true ; do
 
@@ -186,14 +186,15 @@ while true ; do
       # Check the Current Chapter
       if [[ $CurrentChapter -ge 3 ]]; then
         print_ls
+      # Error Command
       else
-        # Error Command
         echo 'Erreur commande : veuillez écrire la commande "help" pour afficher la page aide'
       fi
       ;;
-    fscociety )
+    fscociety ) # THE END GAME -----------------------------------------
     if [[ $CurrentChapter -eq 5 ]];then
       print_fsociety
+    # Error Command
     else
       echo 'Erreur commande : veuillez écrire la commande "help" pour afficher la page aide'
     fi
@@ -207,6 +208,6 @@ while true ; do
   chapter
 
   # Launch Terminal Again
-  read -p  $Path Command ;
+  read -ep  $Path" " Command ;
 
 done # End of Terminal

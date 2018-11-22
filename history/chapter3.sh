@@ -27,8 +27,17 @@ source $PWD/resources/variables.sh
 # Chapitre 3 - Que la balade commance
 # ----------------------------------------------------------------------
 
+if [[ $Command = "ls" ]]; then
 echo -e "${rougefonce}${date}
 Mr. Robot :
 ${vertfonce}Tu as trouvé la recette !
-Attends... Un mot de passe est requis pour le document.
-Trouve-le, ou incris-le si tu l'as en ta possession.${neutre}" #| pv -qL 20
+Attends... Un mot de passe est requis pour ouvrir le document.
+Trouve-le, ou incris-le si tu l'as en ta possession.
+Utilise la commande ${orange}cat${vertfonce} pour afficher le contenu du fichier.${neutre}" #| pv -qL 20
+else
+echo -e "${rougefonce}${date}
+Mr. Robot :
+${vertfonce}Tu as trouvé la recette !
+Cependant, un mot de passe est requis pour ouvrir le document.
+Trouve-le.${neutre}" #| pv -qL 20
+fi
