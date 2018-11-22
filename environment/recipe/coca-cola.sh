@@ -18,15 +18,14 @@
 # ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
-
+# Open File
 if [[ $Command == "cat coca-cola.txt" ]]; then
-
   read -p "Un mot de passe est nécessaire pour lire ce fichier :" Password
-
+  # Check Password
   if [[ $Password == "Ckbm322Fd2RX" ]];then
-
-    source $PWD/environment/recipe/coca-cola-dechiffre.sh
+    source $PWD/environment/recipe/coca-cola-text.sh
+  # Error Password
   else
-      echo "Mauvais mot de passe"
+      echo "Erreur : mot de passe incorrect"
   fi
 fi
