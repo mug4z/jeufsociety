@@ -51,6 +51,7 @@ while true ; do
     echo "----------------------------------------------------------------------"
   }
 
+  # Show Commands in Coca-Cola Servers
   print_help2(){
     echo "----------------------------------------------------------------------"
     echo "help                  : Affiche cette page d'aide."
@@ -82,7 +83,6 @@ while true ; do
   print_connect(){
     for ((i=0 ; 100 - $i ; i++))
       do echo -ne '[                              ]' '('$i'%)\r'
-
       # Show Percentage
       if [[ $i -gt 98 ]]; then
         echo -ne '[==============================] (100%)\r'
@@ -106,9 +106,7 @@ while true ; do
         echo -ne '[===                           ] ('$i'%)\r'
       fi
       sleep 0.05s
-
     done
-
     # Result
     echo -ne '\n'
   }

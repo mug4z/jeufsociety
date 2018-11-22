@@ -49,11 +49,18 @@ elif [[ $Command = "connect 172.30.128.224" ]] && [[ $CurrentChapter = 2 ]]; the
   # Statements
   source $PWD/history/chapter2.sh
   CommandConnect="TurnOff"
+  #Where Start in Coca-Cola Servers
   WhereIAM="racine"
   Path="coca-cola/racine>"
   # Next Chapter
   ((CurrentChapter++))
-fi
 
 # Chapitre 3 - Que la balade commance
 # ----------------------------------------------------------------------
+elif [[ $Command = "cat coca-cola.txt" ]] && [[ $CurrentChapter = 3 ]]; then
+  # Statements
+  source $PWD/history/chapter3.sh
+  # Next Chapter
+  ((CurrentChapter++))
+
+fi
