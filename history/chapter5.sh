@@ -18,11 +18,15 @@
 # ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
-WhereIAM="recipe"
+# Call Function & Variable Scripts
+# ----------------------------------------------------------------------
 
-# Show Content
-if [[ $Command == cd* ]]; then
-  echo "Vous êtes dans le répertoire recette."
-else
-  echo -e "${violetclair}coca-cola.txt${neutre}"
-fi
+# Get Variables
+source $PWD/resources/variables.sh
+
+# Chapitre 3 - Que la balade commance
+# ----------------------------------------------------------------------
+
+echo -e "${rougefonce}${date}
+Mr. Robot :
+${vertfonce}BOOOOM${neutre}" #| pv -qL 20

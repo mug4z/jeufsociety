@@ -125,6 +125,10 @@ while true ; do
   print_ls(){
     directory
   }
+  print_fsociety(){
+    source $PWD/environment/history/chapter5.sh
+
+  }
 
   # Check the Current Command
   case $Command in
@@ -187,6 +191,13 @@ while true ; do
         echo 'Erreur commande : veuillez écrire la commande "help" pour afficher la page aide'
       fi
       ;;
+    fscociety )
+    if [[ $CurrentChapter -eq 5 ]];then
+      print_fsociety
+    else
+      echo 'Erreur commande : veuillez écrire la commande "help" pour afficher la page aide'
+    fi
+      ;;
     * ) # Error Commmad ------------------------------------------------
       echo 'Erreur commande : veuillez écrire la commande "help" pour afficher la page aide'
     ;;
@@ -194,7 +205,7 @@ while true ; do
 
   # Show Current Chapter
   chapter
-  
+
   # Launch Terminal Again
   read -p  $Path Command ;
 
