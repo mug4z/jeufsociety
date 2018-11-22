@@ -31,4 +31,4 @@ echo -e "${rougefonce}${date}
 Mr. Robot :
 ${vertfonce}Tu as trouvé la recette !
 Attends... Un mot de passe est requis pour le document.
-Trouve-le ou incris-le.${neutre}" #| pv -qL 20
+Trouve-le, ou incris-le si tu l'as en ta possession.${neutre}" #| pv -qL 20
