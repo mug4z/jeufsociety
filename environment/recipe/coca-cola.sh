@@ -27,6 +27,6 @@ if [[ $Command == "cat coca-cola.txt" ]]; then
 
     source $PWD/environment/recipe/coca-cola-dechiffre.sh
   else
-      echo "Mauvais mot de passe"
+      echo "Mot de passe incorrect"
   fi
 fi

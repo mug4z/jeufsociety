@@ -57,7 +57,7 @@ elif [[ $Command = "connect 172.30.128.224" ]] && [[ $CurrentChapter = 2 ]]; the
 
 # Chapitre 3 - Que la balade commance
 # ----------------------------------------------------------------------
-elif [[ $Command = "cat coca-cola.txt" ]] && [[ $CurrentChapter = 3 ]]; then
+elif [[ $Command = "ls" ]] && [[ $CurrentChapter = 3 ]]; then
   # Statements
   source $PWD/history/chapter3.sh
   # Next Chapter

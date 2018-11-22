@@ -29,4 +29,6 @@ source $PWD/resources/variables.sh
 
 echo -e "${rougefonce}${date}
 Mr. Robot :
-${vertfonce}BOOOM${neutre}" #| pv -qL 20
+${vertfonce}Excellent travail !
+Comme promis, je ne divilguerai pas tes infomations personnelles.
+Afin de finir notre tâche, tape la command ${orange}fsociety${vertfonce}.${neutre}" #| pv -qL 20
