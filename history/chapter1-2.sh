@@ -28,6 +28,13 @@ source $PWD/resources/variables.sh
 # Chapitre 1.2 - Introducion
 # ----------------------------------------------------------------------
 
+# Block Keyboard
+stty -echo
+
+# Show Text
 echo -e "${rougefonce}${date}
 Mr. Robot :
 ${vertfonce}Connecte-toi aux serveurs de Coca-Cola.${neutre}" | pv -qL 20
+
+#Reenable Keyboard
+stty echo

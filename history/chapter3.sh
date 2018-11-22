@@ -27,6 +27,11 @@ source $PWD/resources/variables.sh
 # Chapitre 3 - Que la balade commance
 # ----------------------------------------------------------------------
 
+
+# Block Keyboard
+stty -echo
+
+# Show Text
 if [[ $Command = "ls" ]]; then
 echo -e "${rougefonce}${date}
 Mr. Robot :
@@ -41,3 +46,6 @@ ${vertfonce}Tu as trouvé la recette !
 Cependant, un mot de passe est requis pour ouvrir le document.
 Trouve-le.${neutre}" | pv -qL 20
 fi
+
+#Reenable Keyboard
+stty echo

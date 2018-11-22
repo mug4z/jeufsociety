@@ -40,9 +40,15 @@ echo "                                                                        ";
 echo "             ACCÈS INTERDIT AUX PERSONNES NON AUTORISÉES                ";
 echo "                                                                        ";
 
+# Block Keyboard
+stty -echo
 
+# Show Text
 echo -e "${rougefonce}${date}
 Mr. Robot :
 ${vertfonce}Bien ! L'étape suivante est de trouver la recette.
 Je t'ai ajouté des nouvelles commandes.
 Affiche-les avec la commande ${orange}help${vertfonce}.${neutre}" | pv -qL 20
+
+#Reenable Keyboard
+stty echo

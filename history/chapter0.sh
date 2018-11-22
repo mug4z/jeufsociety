@@ -28,6 +28,10 @@ source $PWD/resources/variables.sh
 # Chapitre 0 - Introducion
 # ----------------------------------------------------------------------
 
+# Block Keyboard
+stty -echo
+
+# Show Text
 echo -e "${rougefonce}${date}
 Mr. Robot :
 ${vertfonce}Hello friend,
@@ -41,3 +45,6 @@ Ne te pose pas de question, et exécute.
 
 ${vertfonce}Tape la commande ${orange}help${vertfonce} si tu as besoin d'aide.
 ${vertfonce}Elle te sera utile tout le long de notre collaboration.${neutre}" | pv -qL 20
+
+#Reenable Keyboard
+stty echo
