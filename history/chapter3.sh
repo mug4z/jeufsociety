@@ -22,9 +22,7 @@
 # ----------------------------------------------------------------------
 
 # Get Variables
-source $PWD/resources/variables.sh
-
-clear
+source $PWD/resources/variables.sh 
 
 # Chapitre 3 - Que la balade commance
 # ----------------------------------------------------------------------

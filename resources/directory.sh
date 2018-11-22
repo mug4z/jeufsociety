@@ -18,9 +18,10 @@
 # ----------------------------------------------------------------------
 # ----------------------------------------------------------------------
 
-
-# Check Directory
+# Check Command
 CheckCommand="cd\s"
+CheckCommandCat="cat\s"
+
 # Navigation in the directories
 if [[ $Command =~ $CheckCommand ]]; then
   # Go to Administrationn
@@ -41,7 +42,7 @@ if [[ $Command =~ $CheckCommand ]]; then
     Path="coca-cola/racine/root>"
   # Error Folder
   else
-    echo "Erreur commande : le dossier n'existe pas"
+    echo "Erreur : Dossier introuvable"
   fi
 
 # Show Content
@@ -53,15 +54,16 @@ elif [[ $Command = "ls" ]]; then
   elif [[ $WhereIAM = "racine" ]]; then
       source $PWD/environment/racine.sh
   # Show Recipe
-  elif [[ $WhereIAM = "recette" ]]; then
+elif [[ $WhereIAM = "recipe" ]]; then
     source $PWD/environment/recipe/recette.sh
   # Show Root
   elif [[ $WhereIAM = "root"  ]]; then
     source $PWD/environment/root/root.sh
   fi
 
-CheckCommandCat="cat\s"
+# View Files
 elif [[ $Command =~ $CheckCommandCat ]]; then
+  # Administration's Files
   if [[ $WhereIAM == "administration" ]]; then
     if [[ $Command == "cat bin.txt" ]]; then
       source $PWD/environment/administration/bin.sh
@@ -83,32 +85,33 @@ elif [[ $Command =~ $CheckCommandCat ]]; then
         source $PWD/environment/administration/tmp.sh
     elif [[ $Command == "cat var.txt" ]]; then
         source $PWD/environment/administration/var.sh
-
-else
-  echo "Fichier introuvable"
-fi # end of administration
-
+    # Error File
+    else
+      echo "Erreur : Fichier introuvable"
+    fi
+  # Recipe's Files
   elif [[ $WhereIAM == "recipe" ]]; then
     if [[ $Command == "cat coca-cola.txt"  ]]; then
       source $PWD/environment/recipe/coca-cola.sh
+    else
+      echo "Erreur : Fichier introuvable"
     fi
-elif [[ $WhereIAM == "root" ]]; then
-  if [[ $Command == "cat dechifrement.txt" ]]; then
-    source $PWD/environment/root/dechifrement.sh
-  elif [[ $Command == "cat password" ]]; then
-    source $PWD/environment/root/password.sh
+  # Root's Files
+  elif [[ $WhereIAM == "root" ]]; then
+    if [[ $Command == "cat dechifrement.txt" ]]; then
+      source $PWD/environment/root/dechifrement.sh
+    elif [[ $Command == "cat password" ]]; then
+      source $PWD/environment/root/password.sh
+    # Error File
+    else
+      echo "Erreur : Fichier introuvable"
+    fi
+  # Error File
   else
-    echo "Fichier introuvable"
-  fi # end of root
-else
-  echo "Fichier introuvable"
-fi # end of CheckCommandCat
+    echo "Erreur: Fichier introuvable"
+  fi # End of CheckCommandCat
 
-#statements
 # Error Command
 else
   echo 'Erreur commande : veuillez écrire la commande "help" pour afficher la page aide'
-
-# End Check Directory
-fi
-echo $WhereIAM
+fi # End Check Directory

@@ -116,36 +116,35 @@ while true ; do
     directory
   }
 
+  # View File
   print_cat(){
     echo "cat"
   }
 
+  # Show Content
   print_ls(){
     directory
   }
 
   # Check the Current Command
   case $Command in
-
-    help )
-      # Which Terminal to Use
+    help ) # Which Terminal to Use -------------------------------------
       if [[ $CurrentChapter -le 2 ]]; then
         print_help1
       else
         print_help2
       fi
       ;;
-
-    cd* )
+    cd* ) # Change Directory -------------------------------------------
       # Check the Current Chapter
-      if [[ $CurrentChapter -eq 3 ]]; then
+      if [[ $CurrentChapter -ge 3 ]]; then
         print_cd
+      # Error Command
       else
         echo 'Erreur commande : veuillez écrire la commande "help" pour afficher la page aide'
       fi
       ;;
-
-    connect* )
+    connect* ) # Connection to Coca-Cola -------------------------------
       CheckIPFormat="connect\s[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"
       # Command Active or Not
       if [[ $CommandConnect = "TurnOn" ]]; then
@@ -154,48 +153,49 @@ while true ; do
           # Check the Right Address
           if [[ $Command == "connect 172.30.128.224" ]]; then
             print_connect
+          # Error Connexion
           else
-            echo "La connexion est impossible."
+            echo "Erreur : La connexion est impossible."
           fi
+        # Error Valid
         else
-          echo "L'addresse IP est invalide."
+          echo "Erreur : L'addresse IP est invalide."
         fi
+      # Error Command
       else
-        echo "La command n'est pas disponible actuellement."
+        echo "Erreur : La command n'est pas disponible actuellement."
       fi
       ;;
-
-    cat* )
+    cat* ) # View File -------------------------------------------------
       # Check the Current Chapter
-      if [[ $CurrentChapter -eq 3 ]]; then
+      if [[ $CurrentChapter -ge 3 ]]; then
         print_cd
       else
+        # Error Command
         echo 'Erreur commande : veuillez écrire la commande "help" pour afficher la page aide'
       fi
       ;;
-    "list ip addr" )
+    "list ip addr" ) # List IP Address ---------------------------------
       print_listipaddr
       ;;
-
-    ls )
+    ls ) # Show Content ------------------------------------------------
       # Check the Current Chapter
-      if [[ $CurrentChapter -eq 3 ]]; then
+      if [[ $CurrentChapter -ge 3 ]]; then
         print_ls
       else
+        # Error Command
         echo 'Erreur commande : veuillez écrire la commande "help" pour afficher la page aide'
       fi
       ;;
-
-    * )
+    * ) # Error Commmad ------------------------------------------------
       echo 'Erreur commande : veuillez écrire la commande "help" pour afficher la page aide'
     ;;
   esac
 
   # Show Current Chapter
   chapter
-  
 
   # Launch Terminal Again
   read -p  $Path Command ;
 
-done
+done # End of Terminal

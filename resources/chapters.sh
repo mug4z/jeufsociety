@@ -62,5 +62,4 @@ elif [[ $Command = "cat coca-cola.txt" ]] && [[ $CurrentChapter = 3 ]]; then
   source $PWD/history/chapter3.sh
   # Next Chapter
   ((CurrentChapter++))
-
 fi
