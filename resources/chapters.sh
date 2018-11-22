@@ -62,4 +62,18 @@ elif [[ $Command = "cat coca-cola.txt" ]] && [[ $CurrentChapter = 3 ]]; then
   source $PWD/history/chapter3.sh
   # Next Chapter
   ((CurrentChapter++))
+
+# Chapitre 4 - Dernière étape
+# ----------------------------------------------------------------------
+elif [[ $Password = "Ckbm322Fd2RX" ]] && [[ $CurrentChapter = 4 ]]; then
+  # Statements
+  source $PWD/history/chapter4.sh
+  # Next Chapter
+  ((CurrentChapter++))
+
+# Chapitre 5 - THE END
+# ----------------------------------------------------------------------
+elif [[ $Command = "fsociety" ]] && [[ $CurrentChapter = 5 ]]; then
+  # Statements
+  source $PWD/history/chapter5.sh
 fi

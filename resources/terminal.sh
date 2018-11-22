@@ -194,7 +194,7 @@ while true ; do
 
   # Show Current Chapter
   chapter
-  
+
   # Launch Terminal Again
   read -p  $Path Command ;
 
