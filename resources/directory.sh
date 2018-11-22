@@ -98,9 +98,9 @@ elif [[ $Command =~ $CheckCommandCat ]]; then
     fi
   # Root's Files
   elif [[ $WhereIAM == "root" ]]; then
-    if [[ $Command == "cat dechifrement.txt" ]]; then
-      source $PWD/environment/root/dechifrement.sh
-    elif [[ $Command == "cat password" ]]; then
+    if [[ $Command == "cat dechiffrement.txt" ]]; then
+      source $PWD/environment/root/dechiffrement.sh
+    elif [[ $Command == "cat password.txt" ]]; then
       source $PWD/environment/root/password.sh
     # Error File
     else
