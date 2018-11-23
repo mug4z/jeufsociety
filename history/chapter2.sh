@@ -47,8 +47,7 @@ stty -echo
 echo -e "${rougefonce}${date}
 Mr. Robot :
 ${vertfonce}Bien ! L'étape suivante est de trouver la recette.
-Je t'ai ajouté des nouvelles commandes.
-Affiche-les avec la commande ${orange}help${vertfonce}.${neutre}" | pv -qL 20
+Prend connaissance des nouvelles commandes que je t'ai ajouté.${neutre}" | pv -qL 20
 
 #Reenable Keyboard
 stty echo
