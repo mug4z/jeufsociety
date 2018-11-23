@@ -26,7 +26,7 @@ if [[ $Command == cd* ]]; then
 else
   echo -e "${violetclair}bin.txt"
   echo "boot.txt"
-  echo "ini.txt"
+  echo "init.txt"
   echo "lib.txt"
   echo "media.txt"
   echo "mnt.txt"

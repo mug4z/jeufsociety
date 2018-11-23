@@ -38,6 +38,7 @@ chapter
 # Launch Terminal
 # ----------------------------------------------------------------------
 Path="commande>"
+set disable-completion on
 read -ep $Path" " Command ;
 
 while true ; do
@@ -209,5 +210,5 @@ while true ; do
 
   # Launch Terminal Again
   read -ep  $Path" " Command ;
-
+  set disable-completion off
 done # End of Terminal
